@@ -1,14 +1,15 @@
 package com.javahash.spring.service;
 
+import java.util.List;
+
 import com.javahash.spring.model.Employee;
+import com.javahash.spring.util.SearchCriteria;
 
 public interface IEmployeesService {
 	
-	public Iterable<Employee> findEmployeeByAttributes(String key, String value);
+	public Employee findById(Long id);
 	
-	public Employee findEmployeeById(String id);
-	
-	public Iterable<Employee> findEmployeeByAge(int age);
+	public Iterable<Employee> findAll(List<SearchCriteria> searchCriteria);
 	
 	public Iterable<Employee> findAll();
 	

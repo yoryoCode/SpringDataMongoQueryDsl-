@@ -1,4 +1,4 @@
-package com.javahash.spring.dao;
+package com.javahash.spring.dao.repository;
 
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.repository.support.QuerydslRepositorySupport;
@@ -19,7 +19,7 @@ extends QuerydslRepositorySupport
 
    public Iterable<Employee> findAllPredicate() {
        QEmployee employee = QEmployee.employee;
-       Predicate predicate = employee.age.eq(40);
+       Predicate predicate = employee.age.eq(40).or(employee.name.contains("Jor"));
        SpringDataMongodbQuery<Employee> query =  from(employee)
     		   .where(predicate);
        return query.fetch();

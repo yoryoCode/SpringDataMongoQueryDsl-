@@ -10,17 +10,12 @@ import com.javahash.spring.service.impl.EmployeesServiceImpl;
 
 @Configuration
 @ComponentScan({"com.javahash.spring.model"})
-@Import(MongoDBDaoConfig.class)
+@Import({MongoDBConfig.class,DaoConfig.class})
 public class AppConfigurationTest {
 	
 	@Bean(name="employeesService")
 	public IEmployeesService getEmployeesService() {
 	    return new EmployeesServiceImpl(); 
 	}
-	
-//	@Bean(name="employeeRepositoryCustomQueryDsl")
-//	public EmployeeRepositoryCustomQueryDsl getEmployeeRepositoryCustomQueryDsl() {
-//	    return new EmployeeRepositoryCustomQueryDsl(); 
-//	}
-		
+			
 }

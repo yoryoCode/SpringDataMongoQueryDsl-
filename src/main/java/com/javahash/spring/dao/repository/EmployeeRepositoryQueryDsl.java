@@ -1,4 +1,4 @@
-package com.javahash.spring.dao;
+package com.javahash.spring.dao.repository;
 
 import java.util.List;
 
