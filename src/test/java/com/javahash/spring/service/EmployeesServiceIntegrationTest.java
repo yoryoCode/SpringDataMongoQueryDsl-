@@ -53,17 +53,17 @@ public class EmployeesServiceIntegrationTest {
 	public void testCreateEmployee() {
 
 		Employee employee = new Employee();
-		employee.setAge(39);
-		employee.setName("Jorge García Marin");
+		employee.setAge(27);
+		employee.setName("Deyanira Marquez Campos");
 		List<Skill> skills = new ArrayList<Skill>();
 		Skill skillJava = new Skill();
 		skillJava.setExperience(5);
-		skillJava.setName("Java");
-		Skill skillRest = new Skill();
-		skillRest.setExperience(3);
-		skillRest.setName("SpringData");
+		skillJava.setName("Administración Comercial");
+//		Skill skillRest = new Skill();
+//		skillRest.setExperience(3);
+//		skillRest.setName("SpringData");
 		skills.add(skillJava);
-		skills.add(skillRest);
+		//skills.add(skillRest);
 
 		employee.setSkills(skills);
 
